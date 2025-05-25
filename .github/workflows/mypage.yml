@@ -1,13 +1,14 @@
 name: My First github page
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  push:
+    branches:
+    - main
 
 jobs:
-  collect-iss-data:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+  my_job:
+    name: testing
+    runs-on: ubuntu-22.04
 
     steps:
       - name: 22f3000713@ds.study.iitm.ac.in
